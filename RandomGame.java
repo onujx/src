@@ -3,35 +3,36 @@ import java.util.Random;
 
 public class RandomGame {
     public static void main(String[] args) {
-        //ì„ íƒë²ˆí˜¸
+
+        //¼±ÅÃ¹øÈ£
         int[] selectNumber = new int[6];
-        Random random = new Random(3);
-        System.out.print("ì„ íƒ ë²ˆí˜¸: ");
-        for(int i=0; i<6; i++) {
+        Random random = new Random(System.currentTimeMillis());
+        System.out.print("¼±ÅÃ ¹øÈ£: ");
+        for (int i = 0; i < 6; i++) {
             selectNumber[i] = random.nextInt(45) + 1;
             System.out.print(selectNumber[i] + " ");
         }
         System.out.println();
 
-        //ë‹¹ì²¨ë²ˆí˜¸
+        //´çÃ·¹øÈ£
         int[] winningNumber = new int[6];
         random = new Random(5);
-        System.out.print("ë‹¹ì²¨ ë²ˆí˜¸: ");
-        for(int i=0; i<6; i++) {
+        System.out.print("´çÃ· ¹øÈ£: ");
+        for (int i = 0; i < 6; i++) {
             winningNumber[i] = random.nextInt(45) + 1;
             System.out.print(winningNumber[i] + " ");
         }
         System.out.println();
 
-        //ë‹¹ì²¨ì—¬ë¶€
+        //´çÃ·¿©ºÎ
         Arrays.sort(selectNumber);
         Arrays.sort(winningNumber);
         boolean result = Arrays.equals(selectNumber, winningNumber);
-        System.out.print("ë‹¹ì²¨ ì—¬ë¶€: ");
-        if(result) {
-            System.out.println("1ë“±ì— ë‹¹ì²¨ë˜ì…¨ìŠµë‹ˆë‹¤.");
+        System.out.print("´çÃ· ¿©ºÎ: ");
+        if (result) {
+            System.out.println("1µî¿¡ ´çÃ·µÇ¼Ì½À´Ï´Ù.");
         } else {
-            System.out.println("ë‹¹ì²¨ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
+            System.out.println("´çÃ·µÇÁö ¾Ê¾Ò½À´Ï´Ù.");
         }
     }
 }
