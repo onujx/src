@@ -1,9 +1,11 @@
-public class StudentExample {
-    public static void main(String[] args) {
-        Student s1 = new Student();
-        System.out.println("s1 변수가 Student 객체 참조");
+package sec03.exam01_parent_constructor_call;
 
-        Student s2 = new Student();
-        System.out.println("s2 변수가 또 다른 Student 객체 참조");
-    }
+public class StudentExample {
+	public static void main(String[] args) {
+		Student student = new Student("ȫ�浿", "123456-1234567", 1);
+		System.out.println("name : " + student.name);
+		System.out.println("ssn : " + student.ssn);
+		System.out.println("studentNo : " + student.studentNo);
+	}
 }
+
