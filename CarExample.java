@@ -1,36 +1,30 @@
+package sec07.exam03_field_polymorphism;
+
 public class CarExample {
-    public static void main(String[] args) {
-        //ê°ì²´ ìƒì„±
-
-       Car car1 = new Car();
-
-        System.out.println("car1.company :" + car1.company);
-        System.out.println();
-
-
-        Car car2 = new Car();
-        System.out.println("car2.company :" + car2.company);
-        System.out.println("car2.model :" + car2.model);
-        System.out.println();
-
-
-
-        Car car3 = new Car();
-        System.out.println("car3.company :" + car3.company);
-        System.out.println("car3.model :" + car3.model);
-        System.out.println("car3.color :" + car3.color);
-        System.out.println();
-
-
-        Car car4 = new Car();
-        System.out.println("car4.company :" + car4.company);
-        System.out.println("car4.model :" + car4.model);
-        System.out.println("car4.color :" + car4.color);
-        System.out.println("car4.maxSpeed :" + car4.maxSpeed);
-        System.out.println();
-
-
-        //í•„ë“œê°’ ì½ê¸°
-
-    }
+	public static void main(String[] args) {
+		Car car = new Car();
+		
+		for(int i=1; i<=5; i++) {
+			int problemLocation = car.run();
+			switch(problemLocation) {
+				case 1:
+					System.out.println("¾Õ¿ŞÂÊ HankookTire·Î ±³Ã¼");
+					car.frontLeftTire = new HankookTire("¾Õ¿ŞÂÊ", 15);
+					break;
+				case 2:
+					System.out.println("¾Õ¿À¸¥ÂÊ KumhoTire·Î ±³Ã¼");
+					car.frontRightTire = new KumhoTire("¾Õ¿À¸¥ÂÊ", 13);	
+					break;
+				case 3:
+					System.out.println("µÚ¿ŞÂÊ HankookTire·Î ±³Ã¼");
+					car.backLeftTire = new HankookTire("µÚ¿ŞÂÊ", 14);	
+					break;
+				case 4:
+					System.out.println("µÚ¿À¸¥ÂÊ KumhoTire·Î ±³Ã¼");
+					car.backRightTire = new KumhoTire("µÚ¿À¸¥ÂÊ", 17);		
+					break;
+			}
+			System.out.println("----------------------------------------");
+		}
+	}
 }
