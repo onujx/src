@@ -1,7 +1,9 @@
-package sec04.exam03_static_method_use;
+package sec03.exam01_name_implement_class;
 
 public class RemoteControlExample {
 	public static void main(String[] args) {
-		RemoteControl.changeBattery();
+		RemoteControl rc;
+		rc = new Television();
+		rc = new Audio();
 	}
 }

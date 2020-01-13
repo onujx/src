@@ -1,4 +1,4 @@
-package sec04.exam02_default_method_use;
+package sec03.exam01_name_implement_class;
 
 public class Television implements RemoteControl {
 	//ÇÊµå
