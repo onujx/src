@@ -1,8 +1,8 @@
 package sec05.exam03_method_polymorphism;
 
-public class Bus implements Vehicle {
+public class Taxi implements Vehicle {
 	@Override
 	public void run() {
-		System.out.println("버스가 달립니다.");
+		System.out.println("택시가 달립니다.");
 	}
 }
