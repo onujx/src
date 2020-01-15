@@ -1,4 +1,4 @@
-package sec03.exam01_name_implement_class;
+package sec03.exam03_multi_implement_class;
 
 public interface RemoteControl {
 	//»ó¼ö
