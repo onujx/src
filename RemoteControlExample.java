@@ -1,10 +1,11 @@
-package sec03.exam03_multi_implement_class;
+package sec03.exam02_noname_implement_class;
 
 public class RemoteControlExample {
 	public static void main(String[] args) {
-		SmartTelevision tv = new SmartTelevision();
-		
-		RemoteControl rc = tv;
-		Searchable searchable = tv;
+		RemoteControl rc = new RemoteControl() {
+			public void turnOn() { /*실행문*/ }	
+			public void turnOff() { /*실행문*/ }
+			public void setVolume(int volume) { /*실행문*/ }
+		};
 	}
 }
