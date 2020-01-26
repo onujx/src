@@ -1,36 +1,36 @@
-package sec05.exam02_anonymous_implements;
+package sec05.exam01_anonymous_extends;
 
 public class Anonymous {
 	//필드 초기값으로 대입
-	RemoteControl field = new RemoteControl() {
-		@Override
-		public void turnOn() {
-			System.out.println("TV를 켭니다.");
+	Person field = new Person() {
+		void work() {
+			System.out.println("출근합니다.");
 		}
 		@Override
-		public void turnOff() {
-			System.out.println("TV를 끕니다.");
+		void wake() {
+			System.out.println("6시에 일어납니다.");
+			work();
 		}
 	};
 	
 	void method1() {
 		//로컬변수값으로 대입
-		RemoteControl localVar = new RemoteControl() {
-			@Override
-			public void turnOn() {
-				System.out.println("Audio를 켭니다.");
+		Person localVar = new Person() {
+			void walk() {
+				System.out.println("산책합니다.");
 			}
 			@Override
-			public void turnOff() {
-				System.out.println("Audio를 끕니다.");
+			void wake() {
+				System.out.println("7시에 일어납니다.");
+				walk();
 			}
 		};
 		//로컬변수 사용
-		localVar.turnOn();
+		localVar.wake();
 	}
 	
-	void method2(RemoteControl rc) {
-		rc.turnOn();
+	void method2(Person person) {
+		person.wake();
 	}
 }
 
