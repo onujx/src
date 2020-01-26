@@ -1,13 +1,24 @@
+package sec05.exam02_anonymous_implements;
+
 public class AnonymousExample {
-    public static void main(String[] args) {
-        Anonymous anony = new Anonymous();
-        anony.field.run();
-        anony.method1();
-        anony.method2(new Vehicle() {
-            @Override
-            public void run() {
-                System.out.println("íŠ¸ëŸ­ ëŸ°");
-            }
-        });
-    }
+	public static void main(String[] args) {
+		Anonymous anony = new Anonymous();
+		//ÀÍ¸í °´Ã¼ ÇÊµå »ç¿ë
+		anony.field.turnOn();
+		//ÀÍ¸í °´Ã¼ ·ÎÄÃº¯¼ö »ç¿ë
+		anony.method1();
+		//ÀÍ¸í °´Ã¼ ¸Å°³°ª »ç¿ë
+		anony.method2(
+			new RemoteControl() {
+				@Override
+				public void turnOn() {
+					System.out.println("SmartTV¸¦ ÄÕ´Ï´Ù.");
+				}
+				@Override
+				public void turnOff() {
+					System.out.println("SmartTV¸¦ ²ü´Ï´Ù.");
+				}
+			}
+		);
+	}
 }
